@@ -1,0 +1,93 @@
+/* Some basic stuff to include in all the GDI themes */
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+@mixin banner {
+    width: 100%;
+    text-align: center;
+    color: $bannerColor;
+    background: $bannerBackground;
+    height: $bannerHeight;
+    padding: 0 20px;
+    position: absolute;
+    left: 0;
+    font-size: 0.6em;
+    @include flex-row;
+}
+
+
+.reveal {
+    .slide-header {
+        @include banner;
+        top: 0;
+    }
+
+    .slide-footer {
+        @include banner;
+        bottom: 0;
+
+        .left, right {
+            @include flex-row;
+            img {
+                max-height: $bannerHeight;
+            }
+        }
+        .left {
+            justify-content: left;
+        }
+        .right {
+            justify-content: right;
+            margin-right: 200px;
+        }
+    }
+    .left-align {
+        text-align: left;
+    }
+
+    .right-align {
+        text-align: right;
+    }
+
+    .left, .pull-left {
+        float: left;
+    }
+
+    .right, .pull-right {
+        float: right;
+    }
+
+    .two-up {
+        @include flex-row;
+        width: 100%;
+        .left, .right {
+            flex: 1;
+        }
+    }
+
+    .blue   { color: $blue; }
+    .green  { color: $green; }
+    .yellow { color: $yellow; }
+    .pink   { color: $pink; }
+    .red    { color: $red; }
+    .twitter-icon { color: $blue; fill: $blue }
+
+    .slide-number {
+        bottom: inherit;
+        top: 8px;
+    }
+
+    .controls {
+        background: $controlsBackground;
+    }
+}

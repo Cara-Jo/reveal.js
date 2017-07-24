@@ -1,0 +1,42 @@
+/**
+ * GDI "Light" theme for reveal.js.
+ * Vaguely reproduced by tamouse@gmail.com
+ *
+ * Pale yellow background, darker text, red headings
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+$blue:   #01A9B4;
+$green:  #92BB44;
+$yellow: #EDAB23;
+$pink:   #F05B62;
+$red:    #8B0036;
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #f7fbfc;
+$mainColor: #333;
+$headingColor: $red;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.08em;
+$linkColor: #92bb44;
+$selectionBackgroundColor: #134674;
+
+@mixin bodyBackground() {
+    @include radial-gradient(lighten(#edab23, 40%), $backgroundColor);
+}
+
+// GDI Generic Settings
+
+@import "gdi_settings";
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// GDI Stuff -----------------------------------
+@import "gdibasics";

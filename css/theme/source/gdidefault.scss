@@ -1,0 +1,42 @@
+/**
+ * GDI Default theme for reveal.js.
+ * Vaguely reproduced by tamouse@gmail.com
+ *
+ * Black gradient background, white text, pink headings
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+@mixin bodyBackground($outerColor: #555a5f, $innerColor: #1c1e20) {
+  background: $backgroundColor;
+  background: -moz-radial-gradient(center, circle cover, $outerColor 0%, $innerColor 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $outerColor), color-stop(100%, $innerColor));
+  background: -webkit-radial-gradient(center, circle cover, $outerColor 0%, $innerColor 100%);
+  background: -o-radial-gradient(center, circle cover, $outerColor 0%, $innerColor 100%);
+  background: -ms-radial-gradient(center, circle cover, $outerColor 0%, $innerColor 100%);
+  background: radial-gradient(center, circle cover, $outerColor 0%, $innerColor 100%);
+}
+
+$headingColor: #ec054c; // DeepPink
+@mixin headingShadow {
+    text-shadow: 2px 2px 2px lighten($headingColor, 25%);
+}
+
+// GDI Generic Settings
+@import "gdi_settings";
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// GDI Stuff -----------------------------------
+@import "gdibasics";
+
+.reveal {
+    h1,h2,h3,h4,h5,h6{
+        @include headingShadow;
+    }
+}

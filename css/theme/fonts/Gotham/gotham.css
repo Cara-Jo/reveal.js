@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Gotham";
+  src: local("Gotham"), url("Gotham-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gotham-Book";
+  src: local("Gotham-Book"), url("Gotham-Book.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gotham-Italic";
+  src: local("Gotham-Italic"), url("Gotham-MediumItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: local("Gotham-Bold"), url("Gotham-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: bold; }

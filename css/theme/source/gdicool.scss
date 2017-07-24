@@ -1,0 +1,36 @@
+/**
+ * GDI "Cool" theme for reveal.js.
+ * Vaguely reproduced by tamouse@gmail.com
+ *
+ * Pale green gradient background, white text, pink headings
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Override theme settings (see ../template/settings.scss)
+
+$mainColor: #333;
+$headingColor: #8b0036;
+$backgroundColor: #92bb44;
+$linkColor: #01a9b4;
+$selectionBackgroundColor: #134674;
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( lighten($backgroundColor, 40% ), #f7fbfc );
+}
+
+// GDI Generic Settings
+
+@import "gdi_settings";
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// GDI Stuff -----------------------------------
+@import "gdibasics";
